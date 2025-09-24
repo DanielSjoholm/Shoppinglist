@@ -1,65 +1,128 @@
+# 🛒 Shopping List Web App<<<<<<< HEAD
+
 # Try Out Development Containers: Python
+
+A modern, interactive shopping list application built with HTML, CSS, and JavaScript, plus a Python Flask backend.
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-python)
 
+## Features
+
 A **development container** is a running container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Dev Containers](https://aka.ms/vscode-remote/containers)**.
 
-This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
+- ✅ Add and remove items from your shopping list
 
-> **Note:** If you already have a codespace or dev container, you can jump to the [Things to try](#things-to-try) section. 
+- ✅ Mark items as completedThis is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
 
-## Setting up the development container
+- ✅ Clear all completed items
+
+- ✅ Persistent storage (saves your list locally)> **Note:** If you already have a codespace or dev container, you can jump to the [Things to try](#things-to-try) section. 
+
+- ✅ Modern, responsive design
+
+- ✅ Keyboard shortcuts for quick navigation## Setting up the development container
+
+- ✅ Real-time item count and statistics
 
 ### GitHub Codespaces
-Follow these steps to open this sample in a Codespace:
+
+## Quick StartFollow these steps to open this sample in a Codespace:
+
 1. Click the **Code** drop-down menu.
-2. Click on the **Codespaces** tab.
-3. Click **Create codespace on main** .
 
-For more information on creating your codespace, visit the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
+### Option 1: Open HTML directly2. Click on the **Codespaces** tab.
 
-### VS Code Dev Containers
+Simply open `index.html` in your web browser to use the shopping list.3. Click **Create codespace on main** .
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-python) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
-Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
 
-1. If this is your first time using a development container, please ensure your system meets the prerequisites (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
+### Option 2: Run with Python Flask serverFor more information on creating your codespace, visit the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
+
+1. Install Python requirements:
+
+   ```bash### VS Code Dev Containers
+
+   pip install -r requirements.txt
+
+   ```If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-python) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+
+
+
+2. Run the Flask app:Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
+
+   ```bash
+
+   python app.py1. If this is your first time using a development container, please ensure your system meets the prerequisites (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
+
+   ```
 
 2. To use this repository, you can either open the repository in an isolated Docker volume:
 
+3. Open your browser to `http://localhost:5000`
+
     - Press <kbd>F1</kbd> and select the **Dev Containers: Try a Sample...** command.
-    - Choose the "Python" sample, wait for the container to start, and try things out!
+
+## Project Structure    - Choose the "Python" sample, wait for the container to start, and try things out!
+
         > **Note:** Under the hood, this will use the **Dev Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.   
 
-   Or open a locally cloned copy of the code:
+```
 
-   - Clone this repository to your local filesystem.
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
-   - Select the cloned copy of this folder, wait for the container to start, and try things out!
+├── index.html          # Standalone shopping list web app   Or open a locally cloned copy of the code:
 
-## Things to try
+├── static/
 
-Once you have this sample opened, you'll be able to work with it like you would locally.
+│   └── index.html     # Original static version   - Clone this repository to your local filesystem.
 
-Some things to try:
+├── app.py             # Flask backend server   - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
 
-1. **Edit:**
+├── requirements.txt   # Python dependencies   - Select the cloned copy of this folder, wait for the container to start, and try things out!
+
+└── README.md         # This file
+
+```## Things to try
+
+
+
+## Keyboard ShortcutsOnce you have this sample opened, you'll be able to work with it like you would locally.
+
+
+
+- **Enter**: Add new item when typing in input fieldSome things to try:
+
+- **Ctrl+D**: Clear all completed items
+
+- **Ctrl+N**: Focus on input field1. **Edit:**
+
    - Open `app.py`
-   - Try adding some code and check out the language features.
+
+## Technologies Used   - Try adding some code and check out the language features.
+
    - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that utilities like `pylint` and the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/python` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
 
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)   - Also notice that utilities like `pylint` and the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/python` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
 
-2. **Terminal:** 
+- **Backend**: Python Flask
+
+- **Storage**: Browser localStorage (for frontend-only version)
+
+- **Styling**: Modern CSS with gradients and animations2. **Terminal:** 
+
     - Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> to open a terminal window.
-    - Type `python -m flask run --port 9000 --no-debugger --no-reload` to run the app.
-         - The terminal will say your app is `Running on http://127.0.0.1:9000/`. Click on the link in the terminal to view your app running in the browser.
-    - Notice that the Python extension is already installed in the container since the `.devcontainer/devcontainer.json` lists `"ms-python.python"` as an extension to install automatically when the container is created.
-    
-      > **Tip:** If you use this container outside of VS Code via `docker run` with `-p 9000`, you may need to append `--host 0.0.0.0` to the command above. The `-p` option "publishes" the port rather than forwarding it. It therefore will not work if the application only listens to localhost. The `forwardPorts` property in `devcontainer.json` does not have this limitation, but you can use `appPort` property instead if you want to mirror the `docker run` behavior.
 
-3. **Build, Run, and Debug:**
+## Development    - Type `python -m flask run --port 9000 --no-debugger --no-reload` to run the app.
+
+         - The terminal will say your app is `Running on http://127.0.0.1:9000/`. Click on the link in the terminal to view your app running in the browser.
+
+This project includes a complete dev container setup for development in VS Code.    - Notice that the Python extension is already installed in the container since the `.devcontainer/devcontainer.json` lists `"ms-python.python"` as an extension to install automatically when the container is created.
+
+    
+
+## License      > **Tip:** If you use this container outside of VS Code via `docker run` with `-p 9000`, you may need to append `--host 0.0.0.0` to the command above. The `-p` option "publishes" the port rather than forwarding it. It therefore will not work if the application only listens to localhost. The `forwardPorts` property in `devcontainer.json` does not have this limitation, but you can use `appPort` property instead if you want to mirror the `docker run` behavior.
+
+
+
+MIT License - see LICENSE file for details.3. **Build, Run, and Debug:**
    - Open `app.py`
    - Add a breakpoint (e.g. on line 9).
    - Press <kbd>F5</kbd> to launch the app in the container.
@@ -110,3 +173,6 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 Copyright © Microsoft Corporation All rights reserved.<br />
 Licensed under the MIT License. See LICENSE in the project root for license information.
+=======
+# Shoppinglist
+>>>>>>> 9737631e8f77932c858e7c6f6d4ac84796a1bb03
